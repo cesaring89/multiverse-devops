@@ -1,9 +1,9 @@
-# multiverse-devops
+# Multiverse Devops Challenge
 
 Problem: We have to implement a Microservices Solutions using a Flexible approach, easy to maintain that makes use of integrates AWS services, the solutiom must:
     .- Run docker images that execute python code
 
-To achieve this goal I decide the following tools
+To achieve this goal I decide to use the following tools.
 
 Amazon API Gateway: is a fully managed service that makes it easy for us create, publish, maintain, monitor, and secure APIs at any scale. API is the "front door". API Gateway supports containerized and serverless workloads, as well as web applications
 
@@ -23,11 +23,11 @@ GitLab is an open source end-to-end software development platform with built-in 
 
 We are using GitLab as VCS that let our developer work in the same project at the same time, once our developer update our code we can use the diferent tools that Gitlab give us to test the code, build our app and deploy to our infraestructure. Usig GitLab CI our pipelines run in a descentralized machine. In this way we can track, log and test our implementations. Basically we are working in this way.
 
-1.- Our develop locally, once our code is tested locally we can update the code in our VCS.
-2.- Our team review the changes in a collaborative way, is the code is good we can apply the changes in our remote repository.
-3.- When the changes are applied GitLab CI can build the container image.
+1.- We develop locally, once our code is tested locally we can update the code in our GitLab repo.
+2.- Our team review the changes in a collaborative way, if the code is good we can apply the changes in our main Branch.
+3.- When the changes are applied, GitLab CI can build the container image.
 4.- If the image was build without problem GitLab CI can Publish the image to our ECR Register.
 5.- Finally GitLab can Deploy the new Image to AWS Lamba.
 
-Also we can use Gitlab CI to execute oru Terraform Code automatically.
+Also we can use Gitlab CI to execute our Terraform Code automatically.
 
